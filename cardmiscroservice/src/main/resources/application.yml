@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cardmiscroservice
+  #informações necessárias para o estabelecimento de coneção com o broker do rabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ms-eureka-user:iutwe-sdgsagare-shhg@localhost:8761/eureka
+
+  instance:
+    #o "nome" da inst�ncia que ser� nomeDaApliocacao:id aleat�rio
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+#filas de interesse
+mq:
+  queues:
+    card-emission: card-emission

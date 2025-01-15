@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: creditappraisermicroservice
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ms-eureka-user:iutwe-sdgsagare-shhg@localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+mq:
+  queues:
+    card-emission: card-emission

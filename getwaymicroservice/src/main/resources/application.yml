@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: getwaymicroservice
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          #permite a localizacao de outros microservicos
+          enabled: true
+          #ativando por lowerCase (caixaBaixa)
+          lower-case-service-id: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #url que gerará os tokens para autorização
+          issuer-uri: http://localhost:8081/realms/MicroservicesKeyCloack
+
+server:
+  port: 5050
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ms-eureka-user:iutwe-sdgsagare-shhg@localhost:8761/eureka

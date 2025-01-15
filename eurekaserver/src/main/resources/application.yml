@@ -1,0 +1,22 @@
+spring:
+  application:
+    #esse nome ser� usado para acessar a inst�ncia desse"microservice"
+    name: eurekaserver
+  security:
+    basic:
+      enabled: true
+    user:
+      name: ms-eureka-user
+      password: iutwe-sdgsagare-shhg
+
+server:
+  #a porta em que esse "microservice" est� sendo servida
+  port: 8761
+
+eureka:
+  client:
+    #vai impedir que esse "Eureka Server" tente se registrar em outro server, j� que esse n�o � um cliente (os outros que ser�o registrados aqui)
+    #em resumo, indica que essa inst�ncia ser� o servidor principal e n�o atuar� como cliente
+    register-with-eureka: false
+    #impede a busca do registro de outros servidores
+    fetch-registry: false
