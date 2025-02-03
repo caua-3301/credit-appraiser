@@ -29,6 +29,9 @@ A comunicação entre os microserviços ocorre por meio de um sistema de **mensa
 
 ## Arquitetura 🏗️
 
+![microservice-achictecture](https://github.com/user-attachments/assets/9f047574-9471-4814-8d38-9b1edbb00104)
+
+
 A aplicação segue uma arquitetura baseada em **microserviços**, onde cada microserviço é responsável por uma parte específica do processo de avaliação de crédito:
 
 - **Microserviço de Cliente** 🧑‍💼: Responsável por armazenar e recuperar as informações dos clientes.
